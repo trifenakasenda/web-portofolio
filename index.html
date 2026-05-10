@@ -2,91 +2,97 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Portofolio Trifena Sweetly Kasenda - Trifena</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        nav a {
-            margin: 0 10px;
-            font-size: 16px;
-        }
-
-        main {
-            width: 70%;
-            margin: auto;
-        }
-
-        h1 {
-            font-size: 32px;
-        }
-
-        h2 {
-            font-size: 24px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 14px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>✦ Trifena | Web Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Welcome to My Website Portofolio</h1>
-</header>
-
 <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+    <div class="nav-container">
+        <div class="logo">✦ PORTOFOLIO</div>
+        <ul class="nav-links">
+            <li data-page="home" class="active">⎯⎯ HOME</li>
+            <li data-page="gallery">◈ GALLERY</li>
+            <li data-page="blog">✦ BLOG</li>
+            <li data-page="contact">✧ CONTACT</li>
+        </ul>
+    </div>
 </nav>
 
-<hr>
+<div class="container">
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page active-page">
+        <div class="home-grid">
+            <div class="hero-text">
+                <h1>Welcome to<br>My Website<span class="glitch-text"> Portofolio </span></h1>
+                <p>Halo, Saya Trifena Sweetly Kasenda!
+                   Saya merupakan mahasiswa aktif Teknik Informatika di Universitas Sam Ratulangi, yang dimana saat ini saya sedang mendalami bidang Pemrograman Web dan memiliki ketertarikan besar pada dunia teknologi informasi. Saat ini, saya terus belajar dan mengembangkan kemampuan dalam memahami dasar-dasar pembuatan website, mulai dari struktur HTML hingga pengembangan tampilan yang lebih menarik. Bagi saya, teknologi bukan hanya sekadar alat, tetapi juga sarana untuk menciptakan solusi yang bermanfaat bagi banyak orang. Website ini saya buat sebagai portofolio sederhana untuk menampilkan hasil dari tugas yang diberikan pada matakuliah saya yaitu matakuliah Pemrograman Web.</p>
+                <div class="stats">
+                    <div class="stat-card">✨ TRIFENA</div>
+                    <div class="stat-card">👸🏻 SWEETLY</div>
+                    <div class="stat-card">🎀 KASENDA</div>
+                </div>
+            </div>
+            <div class="hero-glow">
+                <svg width="100%" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50,120 Q120,40 200,100 T350,130" stroke="#ff6ac4" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+                    <circle cx="210" cy="110" r="30" fill="url(#grad)" opacity="0.5"/>
+                    <defs><radialGradient id="grad"><stop stop-color="#ff6ac4"/><stop offset="1" stop-color="#a855f7"/></radialGradient></defs>
+                    <text x="120" y="190" fill="#ffb3df" font-size="14" font-weight="bold">✦ explore now ✦</text>
+                </svg>
+                <p style="font-size:0.9rem; text-align:center;">“One's Destination Is Never A Place, But A New Way Of Seeing Things”</p>
+            </div>
+        </div>
+    </div>
 
-<main>
-    <h2>Tentang Saya</h2>
+    <!-- GALLERY PAGE -->
+    <div id="gallery-page" class="page">
+        <div class="gallery-header">
+            <h2 style="font-size:2.5rem;">◈ MY GALLERY ◈</h2>
+<p>koleksi momen pribadiku</p>
+        </div>
+        <div id="gallery-container" class="gallery-grid"></div>
+    </div>
 
-    <p>
-        Hi!
-        Saya Trifena. Saya merupakan mahasiswa aktif Teknik Informatika di Universitas Sam Ratulangi, yang dimana saat ini saya sedang mendalami bidang Pemrograman Web dan memiliki ketertarikan besar pada dunia teknologi informasi.
-        Saat ini, saya terus belajar dan mengembangkan kemampuan dalam memahami dasar-dasar pembuatan website, mulai dari struktur HTML hingga pengembangan tampilan yang lebih menarik. Bagi saya, teknologi bukan hanya sekadar alat, tetapi juga sarana untuk menciptakan solusi yang bermanfaat bagi banyak orang.
-        Website ini saya buat sebagai portofolio sederhana untuk menampilkan hasil dari tugas yang diberikan pada matakuliah saya yaitu matakuliah Pemrograman Web.
-    </p>
+    <!-- BLOG PAGE -->
+    <div id="blog-page" class="page">
+        <div style="margin-bottom:2rem;">
+            <h2 style="font-size:2.5rem;">✦ MY BLOG ✦</h2>
+            <p>Tiga Sudut Pandang: Teknologi, Himpunan, dan Kecantikan</p>
+        </div>
+        <div id="blog-list-container" class="blog-list"></div>
+    </div>
 
-    <p>
-        Di website ini kamu bisa melihat galeri foto saya, artikel blog,
-        dan dimana anda bisa menghubungi saya.
-    </p>
-</main>
+    <!-- CONTACT PAGE -->
+    <div id="contact-page" class="page">
+        <div class="contact-neon">
+            <div class="student-card">
+                <h3 style="margin-bottom:1rem;">✧ FIND ME ✧</h3>
+                <p><span style="font-size:1.3rem;">🎀</span> <strong>Nama</strong> : Trifena Sweetly Kasenda</p>
+                <p><span style="font-size:1.3rem;">🤳🏻</span> <strong>Instagram</strong> : @swtlyksnda</p>
+                <p><span style="font-size:1.3rem;">📧</span> <strong>Email</strong> : trifenakasenda026@student.unsrat.ac.id</p>
+                <p><span style="font-size:1.3rem;">📞</span> <strong>Telepon</strong> : +62 831 6334</p>
+                <p><span style="font-size:1.3rem;">📍</span> <strong>Domisili</strong> : Manado, Sulawesi Utara</p>
+            </div>
+            <div class="contact-form">
+                <h3 style="margin-bottom:1.2rem;">👀 KIRIM PESAN</h3>
+                <form id="uniquemessageForm">
+                    <input type="text" id="uniqueName" placeholder="nama / panggilan" required style="margin-bottom:1rem;">
+                    <input type="email" id="uniqueEmail" placeholder="email aktif" required style="margin-bottom:1rem;">
+                    <textarea id="uniqueMsg" rows="4" placeholder="tulis pesan, kritik, atau kolaborasi..." required style="margin-bottom:1rem;"></textarea>
+                    <button type="submit" class="btn-submit">Kirim ke Fena Cantik ➤</button>
+                    <div id="uniqueFeedback" style="margin-top:1rem; font-size:0.85rem;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-<hr>
+<footer>
+    ♾️ PEMROGRAMAN WEB • Mid.Project-Personal.Homepage • 2026
+</footer>
 
-
+<script src="script.js"></script>
 </body>
 </html>
